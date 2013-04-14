@@ -16,7 +16,7 @@ sub import
 	if ($_[0] eq 'interactive') {
 	    skip_all($_[0]) if env('NON_INTERACTIVE');
 	} elsif ($_[0] eq 'extended') {
-	    skip_all($_[0]) if env('EXTENDED_TESTING');
+	    skip_all($_[0]) unless env('EXTENDED_TESTING');
 	} else {
 	    die "invalid Test::Is argument";
 	}

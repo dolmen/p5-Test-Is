@@ -14,9 +14,9 @@ sub import
 
     while (@_) {
 	if ($_[0] eq 'interactive') {
-	    skip_all($_[0]) if $ENV{NON_INTERACTIVE} eq '1';
+	    skip_all($_[0]) if env('NON_INTERACTIVE');
 	} elsif ($_[0] eq 'extended') {
-	    skip_all($_[0]) if $ENV{EXTENDED_TESTING} eq '1';
+	    skip_all($_[0]) if env('EXTENDED_TESTING');
 	} else {
 	    die "invalid Test::Is argument";
 	}
@@ -24,11 +24,17 @@ sub import
     }
 }
 
+sub env
+{
+    exists $ENV{$_[0]} && $ENV{$_[0]} eq '1'
+}
+
+
 sub skip_all
 {
     my $kind = shift;
     print "1..0 # SKIP $kind test";
-    exit 0;
+    exit 0
 }
 
 1;

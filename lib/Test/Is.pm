@@ -6,6 +6,7 @@ our $VERSION = '20130414';
 
 sub import
 {
+    shift;
     die "missing arguments for Test::Is" unless @_;
 
     # TODO: check if a Test::Builder exists. If this is the case,
@@ -19,6 +20,7 @@ sub import
 	} else {
 	    die "invalid Test::Is argument";
 	}
+	shift;
     }
 }
 

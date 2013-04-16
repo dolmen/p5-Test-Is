@@ -45,7 +45,7 @@ Test::Is - Skip test in a declarative way, following the Lancaster Consensus
 
 =head1 SYNOPSIS
 
-I want that this test run only on interactive environments:
+I want that this runs only on interactive environments:
 
     use Test::Is 'interactive';
 
@@ -63,7 +63,13 @@ Both:
 
 This module is a simple way of following the specifications of the environment
 variables available for Perl tests as defined as one of the
-"Lancaster Consensus" at Perl QA Hackathon 2013.
+"Lancaster Consensus" at Perl QA Hackathon 2013. Those variables
+(C<NON_INTERACTIVE>, C<EXTENDED_TESTING>) define which tests should be
+skipped.
+
+If the environment does not match what the author of the test expected, the
+complete test is skipped (in the same way as C<use L<Test::More> skip_all =E<gt>
+...>).
 
 As an author, you can also expect that you will automatically benefit of later
 evolutions of this specification just by upgrading the module.
@@ -71,6 +77,10 @@ evolutions of this specification just by upgrading the module.
 As a CPAN toolchain author (CPAN client, smoker...) you may want to ensure at
 runtime that the installed version of this module matches the environment
 you set yourself.
+
+=head1 SEE ALSO
+
+L<Test::DescribeMe> by WOLFSAGE, also created at Perl QA Hackathon 2013.
 
 =head1 AUTHOR
 

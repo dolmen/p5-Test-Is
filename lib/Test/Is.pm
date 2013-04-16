@@ -2,8 +2,6 @@ use strict;
 use warnings;
 package Test::Is;
 
-our $VERSION = '20130414';
-
 sub import
 {
     shift;

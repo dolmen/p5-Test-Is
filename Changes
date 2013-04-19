@@ -1,6 +1,7 @@
 Revision history for Test-Is.
 
 {{$NEXT}}
+	Fix t/simulation.t for perl < 5.14
 
 20130414     2013-04-16    DOLMEN (Olivier Mengué)
 	Initial release.

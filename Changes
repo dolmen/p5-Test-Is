@@ -1,6 +1,10 @@
 Revision history for Test-Is.
 
 {{$NEXT}}
+	Fix environment variable name (NON_INTERACTIVE =>
+          NONINTERACTIVE_TESTING) now that the final spec of the Lancaster has
+	  been published.
+	POD: add links to the spec.
 
 20130414.1    2013-04-19    DOLMEN (Olivier Mengué)
 	Fix t/simulation.t for perl < 5.14

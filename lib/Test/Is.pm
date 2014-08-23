@@ -15,6 +15,8 @@ sub import
 	    skip_all($_[0]) if env('NONINTERACTIVE_TESTING');
 	} elsif ($_[0] eq 'extended') {
 	    skip_all($_[0]) unless env('EXTENDED_TESTING');
+        } elsif ($_[0] =~ /^(?:perl[- ])?(v?5\.[0-9.]+)\+?$/) {
+            eval "require $1" or skip_all("perl $1");
 	} else {
 	    die "invalid Test::Is argument";
 	}

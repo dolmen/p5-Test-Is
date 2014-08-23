@@ -1,6 +1,8 @@
 Revision history for Test-Is.
 
 {{$NEXT}}
+
+20140823     2014-08-23    DOLMEN (Olivier Mengué)
 	New feature: perl version check: use Test::Is 'perl v5.10.0';
 	Coded and released from Sofia, at YAPC::EU::2014.
 

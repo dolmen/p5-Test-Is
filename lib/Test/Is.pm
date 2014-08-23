@@ -61,6 +61,13 @@ Both:
 
     use Test::Is 'interactive', 'extended';
 
+This test is only for perl 5.10+:
+
+    use Test::Is 'perl v5.10';
+    use feature 'say';
+    ...
+
+
 =head1 DESCRIPTION
 
 This module is a simple way of following the

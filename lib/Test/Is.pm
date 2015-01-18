@@ -107,6 +107,11 @@ L<Test::DescribeMe> by WOLFSAGE, also created at Perl QA Hackathon 2013.
 L<Test::Requires> by TOKUHIROM: can also conditionally require a specific
 perl version.
 
+=item *
+
+L<recommended> and L<suggested> by DAGOLDEN: alternatives to L<Test::Requires>
+for checking availability of some modules. Require perl 5.8+.
+
 =back
 
 =head1 AUTHOR

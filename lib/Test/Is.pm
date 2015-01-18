@@ -102,6 +102,11 @@ the specification of the Lancaster Consensus.
 
 L<Test::DescribeMe> by WOLFSAGE, also created at Perl QA Hackathon 2013.
 
+=item *
+
+L<Test::Requires> by TOKUHIROM: can also conditionally require a specific
+perl version.
+
 =back
 
 =head1 AUTHOR
